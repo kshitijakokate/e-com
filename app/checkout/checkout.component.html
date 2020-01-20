@@ -1,0 +1,16 @@
+<div class="container">
+
+  <h3>Shopping Cart</h3>
+  
+<!-- <div class="row"> -->
+  <input type="checkbox" value="Cash On Delivery" checked>
+  <label style="font-size: 15px">Cash on Delivery</label><br/>
+  <button class="btn btn-warning" style="font-size: 14px" value="Place Order" (click)="placeorder()">Place Order</button>
+  <!-- </div> --><br/>
+<div>
+<ul *ngFor= "let cart of cartlist; index as i" class="box">
+  <li>{{i+1}} -{{cart.name}}</li>
+</ul>
+
+</div>
+</div>

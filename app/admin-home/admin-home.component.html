@@ -1,0 +1,38 @@
+<div class="container">
+<h3>Hey Admin,<br/> Please add the Products</h3><br/>
+
+<!-- <div class="container"> -->
+ 
+<button (click) ="onSubmit()" class="btn btn-primary" style="font-size: 14px">Add New Product</button>
+<button (click) ="onDelete()" class="btn btn-danger" style="font-size: 14px">Delete Product</button>
+<button (click) ="Login()" class="btn btn-primary btn-lg pull-right" >Log Out</button>
+<div class="text-muted">Please select the item for removing your product that not needed.</div><br/>
+
+<!-- </div> -->
+
+<table class="table table-hover">
+  <thead class="thead-dark">
+   <tr style="font-size: 14px">
+    <th>Select</th>
+    <th>Product<br/> No.</th>
+    <th>Name of the<br/>Product</th>
+    <th>Price</th> 
+   </tr>
+  </thead>
+  <tr [hidden] = 'isShow' style="font-size: 13px">
+    <td></td>
+    <td><input type="text" [(ngModel)] = "eid"></td>
+    <td><input type="text" [(ngModel)] = "eProduct"></td>
+    <td><input type="text" [(ngModel)] = "eprice">&nbsp;&nbsp;<button (click) ="onSave()" class="btn btn-warning" style="font-size: 10px" >Save</button></td>
+    <!-- <td><button (click) ="onSave()" class="btn btn-warning" >Save</button></td>  -->
+  </tr>
+ <tbody *ngFor="let x of products">
+  <tr style="font-size: 13px">
+    <td><input type="checkbox" [(ngModel)]=x.ischecked></td>
+    <td>{{x.id}}</td>
+    <td>{{x.name}}</td>
+    <td>{{x.Price}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

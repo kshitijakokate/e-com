@@ -1,0 +1,25 @@
+<div class="container">
+  <h3>Hey User,<br/>Welocme to Shopping world!</h3><br/>
+
+
+<div>
+  <h1  style="text-align: right">My Cart :{{cart.length}}</h1>
+</div>
+
+
+<div class="row" >
+  <div class="col-md-9 col-md-offset-3">
+    <button (click) ="Login()" class="btn btn-warning btn-lg pull-right" style="font-size: 14px"  >Log Out</button>
+  <input type="button" class="btn btn-primary btn-lg pull-right" style="font-size: 14px" value="Checkout" (click)="checkout()">
+  
+</div>
+
+ <div *ngFor="let x of products" class="box">
+
+  <span class= "spaces"> Product id:{{x.id}} </span><br/>
+  <span class= "spaces"> Product name:{{x.name}}</span><br/>
+  <span class= "spaces">Price:{{x.Price}}</span><br/>
+  <span class= "spaces"><input type="button" class="btn btn-success" (click)="addToCart(x)" value="Add to cart"/></span>
+</div>
+
+</div>

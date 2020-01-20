@@ -1,0 +1,29 @@
+<div class="container">
+ <h3>USER AUTHENTICATION</h3>
+
+ <!-- <div class="center"> -->
+<section class="container-fluid bg">
+  <!-- <section class="row justify-content-center;"> -->
+    <section class="justify-content-center">
+    <section class="col-20 col-s-6 col-md-3">
+  <form #loginform ="ngForm" class="form-container">
+
+   
+    <div class="form-group">   
+  
+        <label>Name</label>
+        <input type="text" #name class="form-control" name="userName" ngModel placeholder="Please enter your Name"><br/><br/>
+  
+        <label>Password</label>
+        <input type="password" #password class="form-control" name="Password" ngModel placeholder="Password">
+  
+      </div>
+  
+   <button type="submit" class="btn btn-primary btn-block" (click)="Lognin(name.value, password.value)">Log in</button>
+
+  </form> 
+</section>
+</section>
+
+</section>
+</div>
